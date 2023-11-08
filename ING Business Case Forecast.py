@@ -145,7 +145,7 @@ rum = pd.read_csv('C:/Users/medinavien/Documents/ING Case/Rum_sales.csv', parse_
 def sktime_forecast(dataset, horizon, forecaster, validation=False, confidence=0.9, frequency="D"):
 
   #Adjust frequency
-  forecast_df = dataset.resample(rule=frequency).sum(numeric_only=True)
+  forecast_df = dataset.resample(rule=frequency).mean(numeric_only=True)
 
   #Interpolate missing periods (if any)
   forecast_df = forecast_df.interpolate(method="time")

@@ -99,7 +99,6 @@ fig15.show()
 #For time series analysis and forecasting
 from sktime.forecasting.base import ForecastingHorizon
 from sktime.forecasting.model_selection import temporal_train_test_split
-from sktime.forecasting.theta import ThetaForecaster
 from sktime.performance_metrics.forecasting import mean_absolute_percentage_error
 from sktime.utils.plotting import plot_series
 
